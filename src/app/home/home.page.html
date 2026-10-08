@@ -1,20 +1,80 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Trabajo en clase
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class = "ion-padding">
+  <hr />
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- Contador 2 -->
+  <div>
+    <h3>Multiplo de 2: </h3>
+    <h1> {{ contador2 }} </h1>
+    <ion-button color="success" (click)="aumentarDos()">Aumentar (+2)</ion-button>
+    <ion-button color="danger" (click)="disminuirDos()">Disminuir (-2)</ion-button>
+    <ion-button color="dark" (click)="reiniciarDos()">Reiniciar</ion-button>
   </div>
+
+  <hr />
+
+  <!-- Contador 3 -->
+  <div>
+    <h3>Multiplo de 3:</h3>
+    <h1> {{ contador3 }} </h1>
+    <ion-button color="success" (click)="aumentarTres()">Aumentar (+3)</ion-button>
+    <ion-button color="danger" (click)="disminuirTres()">Disminuir (-3)</ion-button>
+    <ion-button color="dark" (click)="reiniciarTres()">Reiniciar</ion-button>
+  </div>
+
+  <hr />
+
+  <!-- Contador 5 -->
+  <div>
+    <h3>Multiplo de 5: </h3>
+    <h1>{{ contador5 }}</h1>
+    <ion-button color="success" (click)="aumentarCinco()">Aumentar (+5)</ion-button>
+    <ion-button color="danger" (click)="disminuirCinco()">Disminuir (-5)</ion-button>
+    <ion-button color="dark" (click)="reiniciarCinco()">Reiniciar</ion-button>
+  </div>
+
+  <hr />
+
+  <!-- Contador 7 -->
+  <div>
+    <h3>Multiplo de 7: </h3>
+    <h1>{{ contador7 }}</h1>
+    <ion-button color="success" (click)="aumentarSiete()">Aumentar (+7)</ion-button>
+    <ion-button color="danger" (click)="disminuirSiete()">Disminuir (-7)</ion-button>
+    <ion-button color="dark" (click)="reiniciarSiete()">Reiniciar</ion-button>
+  </div>
+
+  <hr />
+
+  <!-- Contador 10 -->
+  <div>
+    <h3>Multiplo de 10: </h3>
+    <h1>{{ contador10 }}</h1>
+    <ion-button color="success" (click)="aumentarDiez()">Aumentar (+10)</ion-button>
+    <ion-button color="danger" (click)="disminuirDiez()">Disminuir (-10)</ion-button>
+    <ion-button color="dark" (click)="reiniciarDiez()">Reiniciar</ion-button>
+  </div>
+
+  <hr />
+
+  <!-- numeros primos -->
+  <div style="margin-top: 20px;">
+    <ion-button color="warning" expand="block" (click)="togglePrimos()">
+      Mostrar / Ocultar Números Primos
+    </ion-button>
+
+    <!-- Se muestra usando [hidden] -->
+    <div [hidden]="!mostrarPrimosEstado" style="margin-top: 10px; padding: 10px; background: #eee;">
+      <h4>Primeros 15 Números Primos:</h4>
+      <p><strong>{{ primosTexto }}</strong></p>
+    </div>
+  </div>
+
 </ion-content>
